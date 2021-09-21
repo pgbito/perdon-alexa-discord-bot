@@ -1,4 +1,9 @@
+if(require('./config.json').token == 'Enter your token'){
+  console.log('Put your token in ./config.json to run the bot properly!')
 
+}else{
+  try {
+    
 const client = new (require("discord.js")).Client();
 client.once("ready", () => {
   console.log("Ready!");
@@ -14,3 +19,8 @@ client.once("ready", () => {
 
 
 
+
+  } catch (error) {
+    console.log(`Bot error: ${error}`)
+  }
+}
